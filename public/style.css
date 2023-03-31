@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+
+html {
+    height: 100%;
+}
+
+.home-img {
+    width: 100%;
+    margin: 0;
+}
+
+nav {
+    box-shadow: 2px 2px 1px var(--bs-primary);
+    position: relative;
+}
+
+nav > a {
+    text-decoration: none;
+    margin: 1em;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+}
+
+.create-link {
+    position: absolute;
+    right: 0.5em;
+    margin: 0;
+    margin-left: 1em;
+    color: var(--bs-primary);
+}
+
+.create-link:hover {
+    color: #5cb85c;
+}
+
+.card-title {
+    text-decoration: none; 
+    color: black;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.card {
+    margin: 1em;
+    margin-top: 0;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.card-text {
+    text-decoration: none; 
+    color: black;
+    text-align: left;
+    margin-left: 1em;
+}
+
+.card-subtitle {
+    text-decoration: none; 
+    color: black;
+    text-align: center;
+}
+
+.form {
+    width: 60%;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 1px 1px 5px #adb5bd;
+    border: solid 2px #adb5bd;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.delete-button {
+    font-size: small;
+    color: red;
+    background-color: inherit;
+    border: none;
+    margin: 0;
+    margin-left: 11.8em;
+    padding: 0;
+    height: min-content;
+}
+
+.delete-campus {
+    margin-left: 38em;
+}
+
+.single-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.single-card {
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.enrolled-list {
+    position: relative;
+}
+
+.unregister-button {
+    font-size: small;
+    color: red;
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    right: 0.5em;
+}
+  
+.error-msg {
+    position: absolute; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+  
+.error-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10em;
+    max-width: 80%; 
+}
+
+.drop-down-container {
+    margin: 0.25em;
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.drop-down {
+    margin: .25em;
+    justify-content: flex-end;
+}
+
+.gojou-img {
+    width: 100%;
+}

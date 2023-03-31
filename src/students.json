@@ -1,0 +1,130 @@
+[
+    {
+        "firstName": "Yuji",
+        "lastName": "Itadori",
+        "imageUrl": "/images/students/yuji.png",
+        "email": "itadoriyuji@jujutsuhigh.org",
+        "gpa": 3.2,
+        "campusId": 1
+    }, 
+    {
+        "firstName": "Megumi",
+        "lastName": "Fushiguro",
+        "imageUrl": "/images/students/megumi.png",
+        "email": "fushiguromegumi@jujutsuhigh.org",
+        "gpa": 4.0,
+        "campusId": 1
+    }, 
+    {
+        "firstName": "Nobara",
+        "lastName": "Kugisaki",
+        "imageUrl": "/images/students/nobara.png",
+        "email": "kugisakinobara@jujutsuhigh.org",
+        "gpa": 3.4,
+        "campusId": 1
+    },
+    {
+        "firstName": "Maki",
+        "lastName": "Zen'in",
+        "imageUrl": "/images/students/maki.png",
+        "email": "zeninmaki@jujutsuhigh.org",
+        "gpa": 3.5,
+        "campusId": 1
+    },
+    {
+        "firstName": "Toge",
+        "lastName": "Inumaki",
+        "imageUrl": "/images/students/toge.png",
+        "email": "inumakitoge@jujutsuhigh.org",
+        "gpa": 3.6,
+        "campusId": 1
+    },
+    {
+        "firstName": "Panda",
+        "lastName": "",
+        "imageUrl": "/images/students/panda.png",
+        "email": "panda@jujutsuhigh.org",
+        "gpa": 3.3,
+        "campusId": 1
+    },
+    {
+        "firstName": "Yuta",
+        "lastName": "Okkotsu",
+        "imageUrl": "/images/students/yuta.png",
+        "email": "okkotsuyuta@jujutsuhigh.org",
+        "gpa": 3.6,
+        "campusId": 1
+    },
+    {
+        "firstName": "Kinji",
+        "lastName": "Hakari",
+        "imageUrl": "/images/students/kinji.png",
+        "email": "hakarikinji@jujutsuhigh.org",
+        "gpa": 3.7,
+        "campusId": 1
+    },
+    {
+        "firstName": "Kirara",
+        "lastName": "Hoshi",
+        "imageUrl": "/images/students/kirara.png",
+        "email": "hoshikirara@jujutsuhigh.org",
+        "gpa": 3.8,
+        "campusId": 1
+    },
+    {
+        "firstName": "Aoi",
+        "lastName": "Todo",
+        "imageUrl": "/images/students/aoi.png",
+        "email": "todoaoi@jujutsuhigh.org",
+        "gpa": 3.8,
+        "campusId": 2
+    },
+    {
+        "firstName": "Mai",
+        "lastName": "Zen'in",
+        "imageUrl": "/images/students/mai.png",
+        "email": "zeninmai@jujutsuhigh.org",
+        "gpa": 3.5,
+        "campusId": 2
+    },
+    {
+        "firstName": "Kasumi",
+        "lastName": "Miwa",
+        "imageUrl": "/images/students/kasumi.png",
+        "email": "miwakasumi@jujutsuhigh.org",
+        "gpa": 3.8,
+        "campusId": 2
+    },
+    {
+        "firstName": "Kokichi",
+        "lastName": "Muta",
+        "imageUrl": "/images/students/kokichi.png",
+        "email": "mechamaru@jujutsuhigh.org",
+        "gpa": 3.1,
+        "campusId": 2
+    },
+    {
+        "firstName": "Momo",
+        "lastName": "Nishimiya",
+        "imageUrl": "/images/students/momo.png",
+        "email": "nishimiyamomo@jujutsuhigh.org",
+        "gpa": 3.4,
+        "campusId": 2
+    },
+    {
+        "firstName": "Noritoshi",
+        "lastName": "Kamo",
+        "imageUrl": "/images/students/noritoshi.png",
+        "email": "kamonoritoshi@jujutsuhigh.org",
+        "gpa": 3.3,
+        "campusId": 2
+    },
+    {
+        "firstName": "Arata",
+        "lastName": "Nitta",
+        "imageUrl": "/images/students/arata.png",
+        "email": "nittaarata@jujutsuhigh.org",
+        "gpa": 3.9,
+        "campusId": 2
+    }
+]

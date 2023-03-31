@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Tokyo",
+        "description": "Tokyo Prefectural Jujutsu High School, commonly referred to as Tokyo Jujutsu High, is one of only two jujutsu educational institutions in Japan dedicated to fostering the next generation of jujutsu sorcerers.",
+        "imageUrl": "/images/campus/tokyo.png",
+        "address": "Tokyo, Japan"
+    }, 
+    {
+        "name": "Kyoto",
+        "description": "Kyoto Prefectural Jujutsu High School, commonly referred to as Kyoto Jujutsu High, is the sister school of Tokyo Jujutsu High.",
+        "imageUrl": "/images/campus/kyoto.png",
+        "address": "Kyoto, Japan"
+    }
+]
