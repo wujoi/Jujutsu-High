@@ -11,11 +11,11 @@ const SingleStudent = () => {
     const dispatch = useDispatch();
 
     const singleStudent = useSelector(selectSingleStudent);
-    const { id, firstName, lastName, imageUrl, email, gpa, campus } = singleStudent  ?? {};
+    const { id, firstName, lastName, imageUrl, email, gpa, campus } = singleStudent ?? {};
 
     useEffect(() => {
         dispatch(fetchSingleStudent(studentId));
-    }, [dispatch, singleStudent])
+    }, [dispatch])
 
     return (
         <div className="single-container">

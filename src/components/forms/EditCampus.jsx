@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSingleCampus, selectSingleCampus, updateCampus, deleteCampus } from "../../features/singleCampusSlice";
+import { fetchSingleCampus, selectSingleCampus, updateCampus } from "../../features/singleCampusSlice";
+import { deleteCampus } from '../../features/campusSlice';
 import { useNavigate, useParams } from "react-router-dom";
 
 import Form from 'react-bootstrap/Form';
@@ -24,8 +25,6 @@ const EditCampus = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(updateCampus({ id: campusId, name: name, description: description, imageUrl: imageUrl, address: address }));
-        dispatch(fetchSingleCampus(campusId));
-        navigate(`/campuses/${campusId}`);
     }
 
     const handleDelete = (e) => {

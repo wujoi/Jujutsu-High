@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSingleStudent, selectSingleStudent, updateStudent, deleteStudent } from "../../features/singleStudentSlice";
+import { fetchSingleStudent, selectSingleStudent, updateStudent } from "../../features/singleStudentSlice";
+import { deleteStudent } from '../../features/studentsSlice';
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { selectCampus, fetchCampusAsync } from "../../features/campusSlice";
+import { fetchCampusAsync, selectCampus } from "../../features/campusSlice";
 
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/Button";
@@ -29,7 +30,7 @@ const EditStudent = () => {
 
     const isEmail = (str) => /[\w]+@[\w]+\.[a-zA-Z]{3}/.test(str);
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         if (!isEmail(email)){
             alert("Student must have a valid email");
@@ -40,8 +41,8 @@ const EditStudent = () => {
             return;
         } 
         else {
-            console.log("id:", studentId, "campus:", campus)
             dispatch(updateStudent({ id: studentId, firstName: firstName, lastName: lastName, imageUrl: imageUrl, email: email, gpa: gpa, campus: campus }));
+            dispatch(fetchSingleStudent(studentId));
         }
     }
 
@@ -52,7 +53,6 @@ const EditStudent = () => {
     }
 
     const handleCampusChange = async (e) => {
-        e.preventDefault();
         const campusId = e.target.value;
         if (campusId !== 0) {
           const data = await dispatch(fetchSingleCampus(campusId));
@@ -60,8 +60,8 @@ const EditStudent = () => {
         } else {
           setCampus(null);
         }
-    };
-      
+    }; 
+
     return (
         <Form onSubmit={handleSubmit} className='form'>
             <Form.Group controlId="firstName">

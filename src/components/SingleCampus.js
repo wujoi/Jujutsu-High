@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectSingleCampus, fetchSingleCampus } from "../features/singleCampusSlice";
+import { selectSingleCampus, fetchSingleCampus, unregisterStudent } from "../features/singleCampusSlice";
 import { useParams, Link } from "react-router-dom";
 import EditCampus from './forms/EditCampus.jsx'
 
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { unregisterStudent } from "../features/singleStudentSlice";
 
 const SingleCampus = () => {
     const { campusId } = useParams();
@@ -17,12 +16,10 @@ const SingleCampus = () => {
 
     useEffect(() => {
         dispatch(fetchSingleCampus(campusId));
-    }, [dispatch, singleCampus])
+    }, [dispatch])
 
     const handleUnregister = (student) => {
-        console.log(student.id)
         dispatch(unregisterStudent({ id: student.id }));
-        dispatch(fetchSingleCampus(campusId));
     }
 
     return (

@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCampus, fetchCampusAsync } from "../features/campusSlice";
+import { selectCampus, fetchCampusAsync, deleteCampus } from "../features/campusSlice";
 import { Link, useNavigate } from 'react-router-dom';
 
 import Card from 'react-bootstrap/Card';
-import { deleteCampus } from "../features/singleCampusSlice";
 
 const AllCampus = () => {
   const dispatch = useDispatch();
@@ -13,14 +12,14 @@ const AllCampus = () => {
 
   useEffect(() => {
     dispatch(fetchCampusAsync());
-  }, [dispatch, campuses])
+  }, [dispatch])
 
   return (
     <div className='parent-container'>
         {campuses.map((campus) => {
           function handleDelete(campus) {
             dispatch(deleteCampus({ id: campus.id }));
-            dispatch(fetchCampusAsync());
+            // dispatch(fetchCampusAsync());
             navigate('/campuses');
           }
           return(

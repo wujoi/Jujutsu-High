@@ -6,7 +6,6 @@ const initialState = {};
 export const fetchSingleStudent = createAsyncThunk("singleStudent", async (id) => {
   try {
     const { data } = await axios.get(`/api/students/${id}`);
-    // console.log(data, "data");
     return data;
   } catch (err) {
     console.log(err);
@@ -16,31 +15,17 @@ export const fetchSingleStudent = createAsyncThunk("singleStudent", async (id) =
 export const updateStudent = createAsyncThunk(
   "updateStudent",
   async ({ id, firstName, lastName, imageUrl, email, gpa, campus }) => {
+    let campusId = null;
+    if (campus && campus.id) {
+      campusId = campus.id;
+    }
     const { data } = await axios.put(`/api/students/${id}`, {
       firstName: firstName, 
       lastName: lastName, 
       imageUrl: imageUrl, 
       email: email, 
       gpa: gpa,
-      campusId: campus.id,
-    });
-    return data;
-  }
-);
-
-export const deleteStudent = createAsyncThunk(
-  "deleteStudent",
-  async ({ id }) => {
-    const { data } = await axios.delete(`/api/students/${id}`);
-    return data;
-  }
-);
-
-export const unregisterStudent = createAsyncThunk(
-  "unregisterStudent",
-  async ({ id }) => {
-    const { data } = await axios.put(`/api/students/${id}`, {
-      campusId: null,
+      campusId: campusId,
     });
     return data;
   }
@@ -55,12 +40,6 @@ export const singleStudentSlice = createSlice({
       return action.payload;
     });
     builder.addCase(updateStudent.fulfilled, (state, action) => {
-      return action.payload;
-    });
-    builder.addCase(deleteStudent.fulfilled, (state, action) => {
-      return {};
-    });
-    builder.addCase(unregisterStudent.fulfilled, (state, action) => {
       return action.payload;
     });
   },

@@ -70,6 +70,14 @@ export const fetchSortedStudents = createAsyncThunk("students/fetchSorted", asyn
   }
 });
 
+export const deleteStudent = createAsyncThunk(
+  "deleteStudent",
+  async ({ id }) => {
+    const { data } = await axios.delete(`/api/students/${id}`);
+    return data;
+  }
+);
+
 export const studentsSlice = createSlice({
   name: "students",
   initialState,
@@ -87,6 +95,9 @@ export const studentsSlice = createSlice({
     builder.addCase(fetchSortedStudents.fulfilled, (state, action) => {
       return action.payload;
     });
+    builder.addCase(deleteStudent.fulfilled, (state, action) => {
+      return state.filter(state => state.id !== action.payload.id);
+    });  
   },
 });
 

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { selectStudents, fetchStudentsAsync, fetchFilteredStudents, fetchSortedStudents } from "../features/studentsSlice";
+import { selectStudents, fetchStudentsAsync, fetchFilteredStudents, fetchSortedStudents, deleteStudent } from "../features/studentsSlice";
 import { Link, useNavigate } from 'react-router-dom';
-import { selectCampus, fetchCampusAsync } from "../features/campusSlice";
+import { selectCampus } from "../features/campusSlice";
 
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { deleteStudent } from '../features/singleStudentSlice';
 
 const AllStudents = () => {
     const dispatch = useDispatch();
@@ -18,7 +17,6 @@ const AllStudents = () => {
 
     useEffect(() => {
         dispatch(fetchStudentsAsync());
-        dispatch(fetchCampusAsync());
     }, [dispatch])
 
     const handleFilter = (event) => {
