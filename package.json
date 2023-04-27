@@ -5,10 +5,10 @@
   "description": "A review time project",
   "main": "index.js",
   "scripts": {
-    "start": "node seed.js && nodemon server ",
+    "start": "node bin/seed.js && nodemon server/index.js ",
     "start-dev": "webpack --config webpack.config.js -w & nodemon server",
-    "build": "webpack --config webpack.config.js ",
-    "seed": "node seed.js"
+    "build": "webpack --config webpack.config.js",
+    "seed": "node ./bin/seed.js"
   },
   "keywords": [],
   "author": "",
