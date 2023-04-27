@@ -5,13 +5,10 @@
   "description": "A review time project",
   "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "npm run build-watch & npm run start-server ",
-    "build-watch": "webpack -w",
-    "build": "webpack -w",
-    "start-server": "nodemon --watch server -e js,html server/index.js",
-    "seed": "node ./bin/seed"
+    "start": "node seed.js && nodemon server ",
+    "start-dev": "webpack --config webpack.config.js -w & nodemon server",
+    "build": "webpack --config webpack.config.js ",
+    "seed": "node seed.js"
   },
   "keywords": [],
   "author": "",
