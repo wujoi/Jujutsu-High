@@ -1,7 +1,17 @@
 # Jujutsu-High
-A RESTful web platform using React, Redux, Express, and Bootstrap.
+A RESTful web platform to manage students and campuses using React, Redux, Express, and Bootstrap.
 
 <img src="https://user-images.githubusercontent.com/19861773/229241469-1fbb5070-6963-440c-add9-1730a30a258b.png" width="60%">
+
+## Deploy this project:
+
+  (1) Clone the repo 
+  
+  (2) npm install
+  
+  (3) npm run start
+
+## Project features:
 
 View all campuses:
 
